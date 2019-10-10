@@ -12,7 +12,17 @@ First clone this repo. Then run `npm install`.
 
 ## Run
 
-    node main.js
+    node main.js [ <path> ]
+
+``` shellsession
+$ node main.js node_modules
+node_modules
+└── @borkdude
+    └── sci
+        ├── README.md
+        ├── package.json
+        └── sci.js
+```
 
 ## License
 
