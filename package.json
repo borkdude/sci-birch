@@ -1,11 +1,11 @@
 {
-  "name": "sci-wallpaper-downloader",
+  "name": "sci-birch",
   "version": "0.0.1-alpha.1",
-  "description": "A port of yogthos's gist https://gist.github.com/yogthos/d9d2324016f62d151c9843bdac3c0f23 to the Small Clojure Interpreter on NodeJS. It downloads wallpapers from windowsonearth.org.",
+  "description": "A port of lambdaisland/birch to the Small Clojure Interpreter on NodeJS.",
   "main": "main.js",
   "author": "",
   "license": "EPL-1.0",
   "dependencies": {
-    "@borkdude/sci": "0.0.10-alpha.13"
+    "@borkdude/sci": "0.0.10-alpha.14"
   }
 }
