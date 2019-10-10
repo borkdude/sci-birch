@@ -14,6 +14,8 @@ First clone this repo. Then run `npm install`.
 
     node main.js [ <path> ]
 
+Example:
+
 ``` shellsession
 $ node main.js node_modules
 node_modules
