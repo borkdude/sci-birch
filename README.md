@@ -1,6 +1,6 @@
 # sci-birch
 
-A port of [lambdaisland](https://github.com/lambdaisland)'s [birch](https://github.com/lambdaisland/birch) to [sci](https://github.com/borkdude/sci) on NodeJS.
+The tree CLI on NodeJS using the [Small Clojure Interpreter](https://github.com/borkdude/sci). Ported from [lambdaisland](https://github.com/lambdaisland)'s [birch](https://github.com/lambdaisland/birch).
 
 ## Why this port?
 
