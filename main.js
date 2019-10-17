@@ -1,6 +1,6 @@
 // This code is based on this project: https://github.com/lambdaisland/birch
 
-const { evalString } = require('@borkdude/sci');
+const { evalString, toJS } = require('@borkdude/sci');
 const fs = require('fs');
 const { readdirSync, statSync } = fs;
 const { join } = require('path');
@@ -22,7 +22,7 @@ const sciOptions = {
 const script = fs.readFileSync('script.cljs').toString();
 
 // evalString returns a CLJS function which we convert to a JS function
-const main = (evalString(script, sciOptions));
+const main = toJS(evalString(script, sciOptions));
 
 // execute!
 main(process.argv);
