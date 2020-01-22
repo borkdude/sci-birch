@@ -7,6 +7,10 @@ const { join } = require('path');
 
 process.on('uncaughtException', console.error);
 
+// we're creating a environment, so sci will remember evaluations over multiple
+// calls to evalString:
+const env = evalString("(atom)");
+
 const sciOptions = {
   namespaces: {
     "node.interop": {
@@ -15,14 +19,18 @@ const sciOptions = {
       "directory?": function(f) { return statSync(f).isDirectory(); },
       "print": console.log
     }
-  }
+  },
+  env: env
 };
 
 // read the Clojure script from disk
 const script = fs.readFileSync('script.cljs').toString();
 
-// evalString returns a CLJS function which we convert to a JS function
-const main = toJS(evalString(script, sciOptions));
+// evaluate the script:
+evalString(script, sciOptions);
+
+// let's retrieve the main function and make it callable from JS:
+const main = toJS(evalString("user/main", sciOptions));
 
 // execute!
 main(process.argv);
